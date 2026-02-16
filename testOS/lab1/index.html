@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор квадратных уравнений</title>
+    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="icon" href="res/img/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Квадратные уравнения</h1>
+        <p>Лабораторная работа №1</p>
+
+        <div class="input-group">
+            <h2>Введите коэффициенты:</h2>
+            <div>
+                <span>a = <input type="number" id="a" value="1"></span>
+                <span>b = <input type="number" id="b" value="2"></span>
+                <span>c = <input type="number" id="c" value="1"></span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="solve">Решить уравнение</button>
+            <button id="run-tests">Запустить тесты</button>
+        </div>
+
+        <div class="result" id="result">
+            Результат появится здесь
+        </div>
+
+        <h2>Тестовые случаи (7 тестов)</h2>
+        <table class="test-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Проверяемый случай</th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>Результат</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Тесты будут добавлены через JS -->
+            </tbody>
+        </table>
+        <div class="test-results"></div>
+    </div>
+
+    <script src="res/js/script.js"></script>
+</body>
+</html>

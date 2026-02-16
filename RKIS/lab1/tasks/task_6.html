@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание №6</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <link rel="icon" href="../res/img/icon.ico" type="image/x-icon">
+    <style>
+        .table-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            background: #f9f9f9;
+        }
+        .monochrome-table {
+            width: 60%;
+            border: 2px solid #333;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        .monochrome-table th, .monochrome-table td {
+            border: 1px solid #666;
+            padding: 10px;
+        }
+        .monochrome-table th {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="task_1.html" class="nav-brand">ПР №1-6</a>
+            <div class="nav-links">
+                <a href="task_1.html" class="nav-link">1</a>
+                <a href="task_2.html" class="nav-link">2</a>
+                <a href="task_3.html" class="nav-link">3</a>
+                <a href="task_4.html" class="nav-link">4</a>
+                <a href="task_5.html" class="nav-link">5</a>
+                <a href="task_6.html" class="nav-link active">6</a>
+            </div>
+        </nav>
+
+        <h1>Задание №6</h1>
+        <h2>Таблицы</h2>
+
+        <!-- Задание 1: Таблицы с объединением -->
+        <div class="table-card">
+            <h3>Задание №6, часть 1. Таблицы с colspan/rowspan</h3>
+            
+            <div style="display:flex; gap:30px; justify-content:center; flex-wrap:wrap">
+                <!-- Таблица 1 -->
+                <div>
+                    <p><strong>1) cellspacing=0</strong></p>
+                    <table cellspacing="0" style="border-collapse:collapse">
+                        <tr>
+                            <td height="35" bgcolor="#e6e6e6" colspan="2" style="border:1px solid #000; padding:10px; text-align:center"><b>1x1</b></td>
+                            <td width="50" bgcolor="#cccccc" rowspan="2" style="border:1px solid #000; padding:10px; text-align:center"><b>1x2</b></td>
+                        </tr>
+                        <tr>
+                            <td height="35" width="50" bgcolor="#cccccc" style="border:1px solid #000; padding:10px; text-align:center"><b>2x1</b></td>
+                            <td width="50" bgcolor="#e6e6e6" style="border:1px solid #000; padding:10px; text-align:center"><b>2x2</b></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Таблица 2 -->
+                <div>
+                    <p><strong>2) cellpadding=5, valign</strong></p>
+                    <table cellpadding="5" style="border-collapse:collapse">
+                        <tr>
+                            <td height="35" bgcolor="#e6e6e6" colspan="2" valign="top" style="border:1px solid #000; padding:10px; text-align:center"><b>1x1</b></td>
+                            <td width="50" bgcolor="#cccccc" rowspan="2" valign="top" style="border:1px solid #000; padding:10px; text-align:center"><b>1x2</b></td>
+                        </tr>
+                        <tr>
+                            <td height="35" width="50" bgcolor="#cccccc" valign="bottom" style="border:1px solid #000; padding:10px; text-align:center"><b>2x1</b></td>
+                            <td width="50" bgcolor="#e6e6e6" valign="bottom" style="border:1px solid #000; padding:10px; text-align:center"><b>2x2</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица 3 строки x 4 столбца, ширина 60% -->
+        <div class="table-card">
+            <h3>Таблица: 3 строки × 4 столбца (ширина 60%)</h3>
+            <table class="monochrome-table">
+                <caption style="caption-side:bottom; padding:10px; font-size:13px;">Таблица: Сотрудники</caption>
+                <tr>
+                    <th style="width:30%">Ф.И.О.</th>
+                    <th>Должность</th>
+                    <th>Отдел</th>
+                    <th>Оклад</th>
+                </tr>
+                <tr>
+                    <td><b>Иванов И.И.</b></td>
+                    <td>Менеджер</td>
+                    <td bgcolor="#e6e6e6">Продажи</td>
+                    <td>75 000</td>
+                </tr>
+                <tr>
+                    <td><b>Петров П.П.</b></td>
+                    <td>Разработчик</td>
+                    <td bgcolor="#d9d9d9">IT</td>
+                    <td>90 000</td>
+                </tr>
+                <tr>
+                    <td><b>Сидорова А.А.</b></td>
+                    <td>Бухгалтер</td>
+                    <td bgcolor="#cccccc">Финансы</td>
+                    <td>80 000</td>
+                </tr>
+            </table>
+            <p style="font-size:13px; color:#666;">* Ширина левого столбца 30%, фон ячеек в градациях серого</p>
+        </div>
+
+        <!-- Задание 2: Сложная таблица (монохром) -->
+        <div class="table-card">
+            <h3>Задание 2. Сложная таблица</h3>
+            <table style="width:100%; border-collapse:collapse; border:2px solid #333">
+                <tr style="background:#333; color:white">
+                    <th colspan="4" style="padding:15px; text-align:center">Задание №6, часть 2 — Таблица данных</th>
+                </tr>
+                <tr style="background:#666; color:white">
+                    <th style="padding:12px; width:25%">Категория</th>
+                    <th style="padding:12px; width:25%">Наименование</th>
+                    <th style="padding:12px; width:25%">Характеристика</th>
+                    <th style="padding:12px; width:25%">Значение</th>
+                </tr>
+                <!-- Строка 1: ПО (rowspan) -->
+                <tr>
+                    <td rowspan="3" style="background:#d9d9d9; text-align:center; vertical-align:middle; font-weight:bold; border:1px solid #666">ПО</td>
+                    <td style="padding:10px; font-style:italic; border:1px solid #666">Windows 11</td>
+                    <td style="padding:10px; border:1px solid #666">Pro</td>
+                    <td style="padding:10px; text-align:right; border:1px solid #666">25 000</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-style:italic; border:1px solid #666">MS Office</td>
+                    <td style="padding:10px; border:1px solid #666">2021</td>
+                    <td style="padding:10px; text-align:right; border:1px solid #666">35 000</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-style:italic; border:1px solid #666">Photoshop</td>
+                    <td style="padding:10px; border:1px solid #666">CC</td>
+                    <td style="padding:10px; text-align:right; border:1px solid #666">15 000</td>
+                </tr>
+                <!-- Строка 2: Оборудование -->
+                <tr>
+                    <td rowspan="2" style="background:#bfbfbf; text-align:center; vertical-align:middle; font-weight:bold; border:1px solid #666">Оборуд.</td>
+                    <td style="padding:10px; font-style:italic; border:1px solid #666">Ноутбук Dell</td>
+                    <td style="padding:10px; border:1px solid #666">i7/16GB</td>
+                    <td style="padding:10px; text-align:right; border:1px solid #666">85 000</td>
+                </tr>
+                <tr>
+                    <td style="padding:10px; font-style:italic; border:1px solid #666">Монитор</td>
+                    <td style="padding:10px; border:1px solid #666">27"</td>
+                    <td style="padding:10px; text-align:right; border:1px solid #666">32 000</td>
+                </tr>
+                <!-- Итог -->
+                <tr style="background:#333; color:white">
+                    <td colspan="3" style="padding:15px; text-align:right; font-weight:bold">ИТОГО:</td>
+                    <td style="padding:15px; text-align:center; font-weight:bold">~192 000</td>
+                </tr>
+            </table>
+            <p style="margin-top:15px; font-size:13px;">
+                <span style="font-family:'Courier New'; font-style:italic">Курсив, Courier New</span> | 
+                <span style="font-weight:bold">Жирный, Arial</span> |
+                <span style="text-align:left">Слева</span> |
+                <span style="text-align:center">Центр</span> |
+                <span style="text-align:right">Справа</span>
+            </p>
+        </div>
+
+        <div class="footer">
+            task_6.html | Практическая №1, Задание №6<br>© wh1sper 2026
+        </div>
+    </div>
+    <script lang="js" src="../res/js/script.js"></script>
+</body>
+</html>

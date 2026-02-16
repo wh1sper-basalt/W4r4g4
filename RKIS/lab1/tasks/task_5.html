@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание №5</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <link rel="icon" href="../res/img/icon.ico" type="image/x-icon">
+    <style>
+        a:link { color: #333; }
+        a:visited { color: #666; }
+        a:hover { color: #000; }
+        a:active { color: #000; }
+        .bottom-links {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 12px;
+            text-align: center;
+            border-top: 1px solid #666;
+        }
+        .bottom-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .bottom-links a:hover {
+            text-decoration: underline;
+        }
+        body {
+            padding-bottom: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="task_1.html" class="nav-brand">ПР №1-6</a>
+            <div class="nav-links">
+                <a href="task_1.html" class="nav-link">1</a>
+                <a href="task_2.html" class="nav-link">2</a>
+                <a href="task_3.html" class="nav-link">3</a>
+                <a href="task_4.html" class="nav-link">4</a>
+                <a href="task_5.html" class="nav-link active">5</a>
+                <a href="task_6.html" class="nav-link">6</a>
+            </div>
+        </nav>
+
+        <h1>Задание №№5</h1>
+        <h2>Гиперссылки. Задание размеров картинки</h2>
+
+        <h3>Введение</h3>
+        
+        <div style="overflow:auto; margin-bottom:20px">
+            <img src="../res/img/pc.webp"
+                 alt="Персональный компьютер" 
+                 width="300"
+                 align="left"
+                 hspace="20"
+                 vspace="10"
+                 border="1"
+                 style="margin-right:20px; margin-bottom:10px">
+            
+            <p><i><b>Персональные компьютеры</b></i> — это универсальное устройство для обработки информации. В отличие от телефона, магнитофона или телевизора, осуществляющих только заранее заложенные в них функции, персональные компьютеры могут выполнять любые действия по обработке информации.</p>
+            <p>Для этого необходимо составить для компьютера на понятном ему языке точную и подробную последовательность инструкций — программ.</p>
+            <p><u>«Компьютер сделал»</u> означает, что на компьютере была выполнена программа.</p>
+            <p>Рассмотрим <b><i><u>основные разновидности программ</u></i></b> для ПК <b>IBM PC</b>.</p>
+        </div>
+
+        <div style="background:#f2f2f2; padding:15px; margin:20px 0">
+            <p><strong>Параметры изображения:</strong></p>
+            <ul>
+                <li>width="300" — ширина</li>
+                <li>alt="Персональный компьютер" — описание</li>
+                <li>align="left" — обтекание справа</li>
+                <li>hspace="20", vspace="10" — отступы</li>
+                <li>border="1" — рамка</li>
+            </ul>
+        </div>
+
+        <!-- Нижняя панель с гиперссылками (по заданию) -->
+        <div class="bottom-links">
+            <a href="task_1.html">Задание №1</a>
+            <a href="task_2.html">Задание №2</a>
+            <a href="task_5.html" style="background:#333; padding:5px 12px;">Задание №5</a>
+        </div>
+
+        <div class="footer" style="margin-bottom:20px">
+            task_5.html | Практическая №1, Задание №5<br>© wh1sper 2026
+        </div>
+    </div>
+    <script lang="js" src="../res/js/script.js"></script>
+</body>
+</html>

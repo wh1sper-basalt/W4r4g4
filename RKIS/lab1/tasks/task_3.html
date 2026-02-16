@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание №3</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <link rel="icon" href="../res/img/icon.ico" type="image/x-icon">
+    <style>
+        a:link { color: #333; }
+        a:visited { color: #666; }
+        a:hover { color: #000; background: #f2f2f2; }
+        a:active { color: #000; }
+        .sidebar {
+            float: right;
+            width: 220px;
+            background: #f2f2f2;
+            padding: 20px;
+            margin-left: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="task_1.html" class="nav-brand">ПР №1-6</a>
+            <div class="nav-links">
+                <a href="task_1.html" class="nav-link">1</a>
+                <a href="task_2.html" class="nav-link">2</a>
+                <a href="task_3.html" class="nav-link active">3</a>
+                <a href="task_4.html" class="nav-link">4</a>
+                <a href="task_5.html" class="nav-link">5</a>
+                <a href="task_6.html" class="nav-link">6</a>
+            </div>
+        </nav>
+
+        <h1>Задание №3</h1>
+        <h2>Создание гиперссылок</h2>
+
+        <div class="sidebar">
+            <h3 style="margin-top:0">Задания</h3>
+            <p><a href="task_1.html">▶ Задание №1</a></p>
+            <p><a href="task_2.html">▶ Задание №2</a></p>
+            <p style="margin-top:20px"><a href="#subjects">К предметам</a></p>
+            <p><a href="#spec">К специальностям</a></p>
+        </div>
+
+        <p><strong>Цвета ссылок:</strong> непосещенная (#333), посещенная (#666), hover (#000), active (#000)</p>
+        
+        <h3 id="subjects" style="margin-top:30px">Изучаемые предметы</h3>
+        <ul>
+            <li>Предметы на первом курсе:
+                <ul>
+                    <li>Математика</li>
+                    <li>История</li>
+                    <li>Программирование
+                        <ul>
+                            <li>Теория</li>
+                            <li>Практика</li>
+                        </ul>
+                    </li>
+                    <li>Химия</li>
+                    <li>Физика</li>
+                    <li>География</li>
+                </ul>
+            </li>
+            <li>Предметы на втором курсе</li>
+            <li>Предметы на третьем курсе</li>
+        </ul>
+
+        <h3 id="spec">Специальности</h3>
+        <dl style="background:#f2f2f2; padding:15px; border-left:3px solid #333">
+            <dt><strong>ФИН</strong></dt>
+            <dd>— Финансы [0603]</dd>
+            <dt><strong>БХ</strong></dt>
+            <dd>— Экономика и бухгалтерский учет [0601]</dd>
+            <dt><strong>АС</strong></dt>
+            <dd>— Автоматизированные системы [2202]</dd>
+            <dt><strong>ПВ</strong></dt>
+            <dd>— Правоведение [0201]</dd>
+        </dl>
+
+        <div style="clear:both"></div>
+        <div class="footer">
+            task_3.html | Практическая №1, задание №3<br>© wh1sper 2026
+        </div>
+    </div>
+    <script lang="js" src="../res/js/script.js"></script>
+</body>
+</html>
