@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР №3 | Часть 1. Тренировка с Emmet</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <link rel="icon" href="../res/img/icon.ico" type="image/x-icon">
+    <style>
+        .emmet-example {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            border-left: 4px solid #666;
+        }
+        .emmet-comment {
+            color: #6a9955;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-brand">ПР №3</a>
+            <div class="nav-links">
+                <a href="part1.html" class="nav-link active">Часть 1</a>
+                <a href="part2.html" class="nav-link">Часть 2</a>
+            </div>
+        </nav>
+
+        <h1>Практическая работа №3</h1>
+        <h2>Часть 1. Тренировка с Emmet</h2>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Задание 1. Подбор сокращений Emmet</h3>
+            </div>
+
+            <div class="comparison-grid">
+                <div>
+                    <h4>Исходная структура:</h4>
+                    <div class="code-block">
+&lt;div class="logo"&gt;
+    &lt;a href=""&gt;&lt;img src="" alt=""&gt;&lt;/a&gt;
+    &lt;nav&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+                    </div>
+                </div>
+                <div>
+                    <h4>Emmet сокращение:</h4>
+                    <div class="emmet-example">
+                        <span class="emmet-comment">&lt;!-- div.logo>a>img^nav>a*3 --&gt;</span><br>
+                        div.logo>a>img^nav>a*3
+                    </div>
+                    <p><strong>Пояснение:</strong> Создаем div с классом logo, внутри ссылку с изображением, поднимаемся на уровень выше (^) и добавляем nav с тремя ссылками.</p>
+                </div>
+                <div>
+                    <h4>Исходная структура:</h4>
+                    <div class="code-block">
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;div class="comment"&gt;
+    &lt;img src="" alt="" class="comment_foto"&gt;
+    &lt;div class="comment_text"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </div>
+                </div>
+                <div>
+                    <h4>Emmet сокращение:</h4>
+                    <div class="emmet-example">
+                        <span class="emmet-comment">&lt;!-- h2*2+div.comment>img.comment_foto+div.comment_text --&gt;</span><br>
+                        h2*2+div.comment>img.comment_foto+div.comment_text
+                    </div>
+                    <p><strong>Пояснение:</strong> Два заголовка h2, затем div с классом comment, внутри изображение с классом comment_foto и div с классом comment_text.</p>
+                </div>
+                <div>
+                    <h4>Исходная структура:</h4>
+                    <div class="code-block">
+&lt;form action=""&gt;
+    &lt;select name="" id=""&gt;
+        &lt;option value=""&gt;&lt;/option&gt;
+        &lt;option value=""&gt;&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;input type="date"&gt;
+    &lt;input type="date"&gt;
+    &lt;input type="number"&gt;
+    &lt;select name="" id=""&gt;
+        &lt;option value=""&gt;&lt;/option&gt;
+        &lt;option value=""&gt;&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+                    </div>
+                </div>
+                <div>
+                    <h4>Emmet сокращение:</h4>
+                    <div class="emmet-example">
+                        <span class="emmet-comment">&lt;!-- form>select>option*2^input[type=date]*2+input[type=number]+(select>option*2)+input[type=submit] --&gt;</span><br>
+                        form>select>option*2^input[type=date]*2+input[type=number]+(select>option*2)+input[type=submit]
+                    </div>
+                    <p><strong>Пояснение:</strong> Сложная структура с группировкой и подъемом по дереву.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Задание 2. Расшифровка сокращений Emmet</h3>
+            </div>
+
+            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <!-- Сокращение 1 -->
+                <div class="border">
+                    <h4>Сокращение: <code>h1+div.steps>div.step*6</code></h4>
+                    <div class="emmet-result">
+                        <strong>Результат:</strong>
+                        <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px;">
+&lt;h1&gt;&lt;/h1&gt;
+&lt;div class="steps"&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+    &lt;div class="step"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </div>
+                <div class="border">
+                    <h4>Сокращение: <code>h1+nav>a*7</code></h4>
+                    <div class="emmet-result">
+                        <strong>Результат:</strong>
+                        <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px;">
+&lt;h1&gt;&lt;/h1&gt;
+&lt;nav&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+    &lt;a href=""&gt;&lt;/a&gt;
+&lt;/nav&gt;
+                        </pre>
+                    </div>
+                </div>
+                <div class="border">
+                    <h4>Сокращение: <code>div.promo>img+h2+div.promo_text+button</code></h4>
+                    <div class="emmet-result">
+                        <strong>Результат:</strong>
+                        <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px;">
+&lt;div class="promo"&gt;
+    &lt;img src="" alt=""&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;div class="promo_text"&gt;&lt;/div&gt;
+    &lt;button&gt;&lt;/button&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </div>
+                <div class="border">
+                    <h4>Сокращение: <code>div.info>h2+p*2+p>ul>li*3^^p*3</code></h4>
+                    <div class="emmet-result">
+                        <strong>Результат:</strong>
+                        <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px;">
+&lt;div class="info"&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Визуальная демонстрация результатов</h3>
+            </div>
+
+            <h3>1. Структура steps (h1+div.steps>div.step*6):</h3>
+            <div class="steps" style="background: #f5f5f5; padding: 15px; margin: 10px 0;">
+                <h1>Заголовок страницы</h1>
+                <div class="steps" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                    <div class="step" style="background: #333; color: white; padding: 10px; text-align: center;">Шаг 1</div>
+                    <div class="step" style="background: #333; color: white; padding: 10px; text-align: center;">Шаг 2</div>
+                    <div class="step" style="background: #333; color: white; padding: 10px; text-align: center;">Шаг 3</div>
+                    <div class="step" style="background: #666; color: white; padding: 10px; text-align: center;">Шаг 4</div>
+                    <div class="step" style="background: #666; color: white; padding: 10px; text-align: center;">Шаг 5</div>
+                    <div class="step" style="background: #666; color: white; padding: 10px; text-align: center;">Шаг 6</div>
+                </div>
+            </div>
+
+            <h3>2. Структура promo (div.promo>img+h2+div.promo_text+button):</h3>
+
+            <div class="promo" style="background: linear-gradient(135deg, #333, #666); color: white; padding: 20px; border-radius: 8px;">
+                <div style="background: rgba(255,255,255,0.2); width: 100%; height: 4px; margin-bottom: 20px; border-radius: 2px;"></div>
+                <h2 style="color: white;">Акционное предложение</h2>
+                <div class="promo_text" style="margin: 15px 0;">Специальная цена на все торты в этом месяце!</div>
+                <button style="padding: 10px 20px; background: white; border: none; border-radius: 4px; color: #333; font-weight: bold;">Заказать</button>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                <em>Примечание: тег img опущен для упрощения демонстрации структуры</em>
+            </p>
+        </div>
+
+        <div class="footer">
+            part1.html | Практическая работа №3, Часть 1 (Тренировка с Emmet)<br>
+            © wh1sper 2026
+        </div>
+    </div>
+    <script src="../res/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР №3 | Часть 2. Структура страниц</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <link rel="icon" href="../res/img/icon.ico" type="image/x-icon">
+    <style>
+        .site-header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .site-nav {
+            background: #666;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .site-nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .banner-section {
+            background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .advantage-item {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .about-section {
+            background: #e6e6e6;
+            padding: 30px;
+            margin: 20px 0;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .review-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feedback-form {
+            background: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .footer-structure {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .demo-block {
+            border: 2px dashed #666;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.9);
+        }
+        .emmet-code {
+            background: #2d2d2d;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-brand">ПР №3</a>
+            <div class="nav-links">
+                <a href="part1.html" class="nav-link">Часть 1</a>
+                <a href="part2.html" class="nav-link active">Часть 2</a>
+            </div>
+        </nav>
+
+        <h1>Практическая работа №3</h1>
+        <h2>Часть 2. Структура страниц сайта "Торты"</h2>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Структура главной страницы (index.html)</h3>
+            </div>
+
+            <h3>1. Шапка сайта (header)</h3>
+            <div class="emmet-code">
+                &lt;!-- Шапка сайта с логотипом и панелью навигации --&gt;<br>
+                header>nav
+            </div>
+            <div class="site-header">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="logo" style="font-size: 24px; font-weight: bold;">🍰 Торты</div>
+                    <nav class="site-nav">
+                        <a href="#">Главная</a>
+                        <a href="#">Готовые торты</a>
+                        <a href="#">Начинка</a>
+                        <a href="#">Доставка</a>
+                    </nav>
+                </div>
+            </div>
+
+            <h3>2. Рекламный баннер</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для рекламного баннера --&gt;<br>
+                section.banner>.content
+            </div>
+            <div class="banner-section">
+                <div class="content">
+                    <h2 style="font-size: 2em; margin-bottom: 15px;">Скидка 20% на первый заказ!</h2>
+                    <p>Закажите торт сегодня и получите подарок</p>
+                </div>
+            </div>
+
+            <h3>3. Секция "Наши преимущества"</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция Наши преимущества --&gt;<br>
+                section.advantages>.content>.advantage*4
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-item">🍰 Натуральные продукты</div>
+                <div class="advantage-item">👨‍🍳 Опытные кондитеры</div>
+                <div class="advantage-item">🚚 Бесплатная доставка</div>
+                <div class="advantage-item">💝 Индивидуальный дизайн</div>
+            </div>
+
+            <h3>4. Секция "Выбор услуги"</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для выбора услуги --&gt;<br>
+                section.select>.content>.select_cakes>.select_cake*2
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+                <div style="background: #f5f5f5; padding: 20px; text-align: center; border: 2px solid #333;">
+                    <h4>Свадебные торты</h4>
+                    <p>От 3000 руб/кг</p>
+                </div>
+                <div style="background: #f5f5f5; padding: 20px; text-align: center; border: 2px solid #333;">
+                    <h4>Детские торты</h4>
+                    <p>От 2500 руб/кг</p>
+                </div>
+            </div>
+
+            <h3>5. Секция "О компании"</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для блока О компании --&gt;<br>
+                section.about
+            </div>
+            <div class="about-section">
+                <div style="flex: 1;">
+                    <h3 style="color: #333;">О нашей кондитерской</h3>
+                    <p>Мы создаем торты с 2010 года. За это время мы испекли более 5000 тортов для наших клиентов. Каждый торт — это уникальное произведение искусства.</p>
+                </div>
+                <div style="flex: 1; background: #ccc; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    Фото кондитерской
+                </div>
+            </div>
+
+            <h3>6. Секция "Отзывы"</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для отзывов клиентов --&gt;<br>
+                section.reviews>.content>.review>.review__text
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review__text">"Очень вкусный торт, спасибо!"</div>
+                    <div style="margin-top: 10px;">— Анна</div>
+                </div>
+                <div class="review-card">
+                    <div class="review__text">"Прекрасное исполнение заказа"</div>
+                    <div style="margin-top: 10px;">— Михаил</div>
+                </div>
+                <div class="review-card">
+                    <div class="review__text">"Доставили вовремя, торт свежий"</div>
+                    <div style="margin-top: 10px;">— Елена</div>
+                </div>
+            </div>
+
+            <h3>7. Форма обратной связи</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для блока обратной связи с клиентом --&gt;<br>
+                section.feedback>.content>.form__contact+.form__download+.form__submit
+            </div>
+            <div class="feedback-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="form__contact">
+                        <h4>Контакты</h4>
+                        <p>📞 +7 (495) 777-77-77</p>
+                        <p>✉️ info@basaltcakes.com</p>
+                    </div>
+                    <div class="form__download">
+                        <h4>Загрузить файл</h4>
+                        <input type="file" style="padding: 10px; border: 1px solid #ccc; width: 100%;">
+                    </div>
+                    <div class="form__submit">
+                        <h4>Отправить</h4>
+                        <button style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 4px;">Отправить</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3>8. Блок с картой</h3>
+            <div class="emmet-code">
+                &lt;!-- Секция для блока с картой --&gt;<br>
+                section.map>.content
+            </div>
+            <div style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+                [Здесь будет карта Google Maps]
+            </div>
+
+            <h3>9. Подвал сайта (footer)</h3>
+            <div class="emmet-code">
+                &lt;!-- Подвал сайта --&gt;<br>
+                footer>.content>.footer__main>.footer__info+.footer__social+.footer__menu>nav^^.footer__add
+            </div>
+            <div class="footer-structure">
+                <div class="footer__info">
+                    <h4 style="color: white;">О нас</h4>
+                    <p>Лучшие торты в городе</p>
+                </div>
+                <div class="footer__social">
+                    <h4 style="color: white;">Соцсети</h4>
+                    <p>ВКонтакте</p>
+                    <p>Telegram</p>
+                </div>
+                <div class="footer__menu">
+                    <h4 style="color: white;">Меню</h4>
+                    <nav>
+                        <a href="#" style="color: #ccc; display: block;">Главная</a>
+                        <a href="#" style="color: #ccc; display: block;">Каталог</a>
+                    </nav>
+                </div>
+                <div class="footer__add">
+                    <h4 style="color: white;">Доп info</h4>
+                    <p>© 2026</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Страница готовых тортов (cakes.html)</h3>
+            </div>
+            <div class="emmet-code">
+                &lt;!-- Структура страницы готовых тортов --&gt;<br>
+                section.cakes>.content>.cake>(.cake_descript>.cake_descript_text)+.cake_buy>.cake_buy_wrap>.cake_buy_wrap_filling+.cake_buy_wrap_price
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0;">
+                <div class="structure-block">
+                    <div class="cake_descript" style="background: #f5f5f5; padding: 15px;">
+                        <div class="cake_descript_text">
+                            <h4>Медовик</h4>
+                            <p>Нежные коржи с медовым кремом</p>
+                        </div>
+                    </div>
+                    <div class="cake_buy" style="margin-top: 10px;">
+                        <div class="cake_buy_wrap" style="background: #e6e6e6; padding: 10px;">
+                            <div class="cake_buy_wrap_filling">Начинка: сгущенка</div>
+                            <div class="cake_buy_wrap_price">Цена: 2500 руб</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="structure-block">
+                    <div class="cake_descript" style="background: #f5f5f5; padding: 15px;">
+                        <div class="cake_descript_text">
+                            <h4>Наполеон</h4>
+                            <p>Хрустящие коржи с заварным кремом</p>
+                        </div>
+                    </div>
+                    <div class="cake_buy" style="margin-top: 10px;">
+                        <div class="cake_buy_wrap" style="background: #e6e6e6; padding: 10px;">
+                            <div class="cake_buy_wrap_filling">Начинка: заварной крем</div>
+                            <div class="cake_buy_wrap_price">Цена: 2800 руб</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="structure-block">
+                    <div class="cake_descript" style="background: #f5f5f5; padding: 15px;">
+                        <div class="cake_descript_text">
+                            <h4>Красный бархат</h4>
+                            <p>Красные коржи с сырным кремом</p>
+                        </div>
+                    </div>
+                    <div class="cake_buy" style="margin-top: 10px;">
+                        <div class="cake_buy_wrap" style="background: #e6e6e6; padding: 10px;">
+                            <div class="cake_buy_wrap_filling">Начинка: сырный крем</div>
+                            <div class="cake_buy_wrap_price">Цена: 3200 руб</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Страница начинки (filling.html)</h3>
+            </div>
+            <div class="emmet-code">
+                &lt;!-- Блоки о начинках --&gt;<br>
+                section.fillings>.content>figure.fillings>figcaption
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 20px 0;">
+                <figure class="fillings" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
+                    <div style="background: #ddd; height: 100px; margin-bottom: 10px;"></div>
+                    <figcaption>Шоколадный ганаш</figcaption>
+                </figure>
+                <figure class="fillings" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
+                    <div style="background: #ddd; height: 100px; margin-bottom: 10px;"></div>
+                    <figcaption>Крем-чиз</figcaption>
+                </figure>
+                <figure class="fillings" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
+                    <div style="background: #ddd; height: 100px; margin-bottom: 10px;"></div>
+                    <figcaption>Ягодное конфи</figcaption>
+                </figure>
+                <figure class="fillings" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
+                    <div style="background: #ddd; height: 100px; margin-bottom: 10px;"></div>
+                    <figcaption>Карамель</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="task-card">
+            <div class="task-header">
+                <h3 style="color: gray-700; margin: 0;">Страница доставки (delivery.html)</h3>
+            </div>
+            <div class="emmet-code">
+                &lt;!-- Секция для блока условий доставки --&gt;<br>
+                section.delivery>.content>.delivery__about+.delivery__price
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin: 20px 0;">
+                <div class="delivery__about" style="background: #f5f5f5; padding: 20px;">
+                    <h4>Условия доставки</h4>
+                    <p>Доставка осуществляется ежедневно с 10:00 до 22:00</p>
+                    <p>Минимальное время доставки: 2 часа</p>
+                    <p>Бесплатная доставка при заказе от 3000 руб</p>
+                </div>
+                <div class="delivery__price" style="background: #e6e6e6; padding: 20px;">
+                    <h4>Стоимость доставки</h4>
+                    <table style="width: 100%;">
+                        <tr><td>До 5 км</td><td>300 руб</td></tr>
+                        <tr><td>5-10 км</td><td>500 руб</td></tr>
+                        <tr><td>10-15 км</td><td>700 руб</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-card">
+    <div class="task-header">
+        <h3 style="color: gray-700; margin: 0;">Сводная таблица Emmet-сокращений</h3>
+    </div>
+            <div style="overflow-x: auto; margin: 0 -10px; padding: 0 10px;">
+                <table style="width: 100%; max-width: 1000px; margin: 20px auto; font-size: 0.9em;">
+                    <tr>
+                        <th style="width: 15%;">Блок</th>
+                        <th style="width: 50%;">Emmet сокращение</th>
+                        <th style="width: 35%;">Описание</th>
+                    </tr>
+                    <tr>
+                        <td>Шапка</td>
+                        <td><code>header>nav</code></td>
+                        <td>Шапка с навигацией</td>
+                    </tr>
+                    <tr>
+                        <td>Баннер</td>
+                        <td><code>section.banner>.content</code></td>
+                        <td>Рекламный баннер</td>
+                    </tr>
+                    <tr>
+                        <td>Преимущества</td>
+                        <td><code>section.advantages>.content>.advantage*4</code></td>
+                        <td>4 преимущества</td>
+                    </tr>
+                    <tr>
+                        <td>Выбор услуги</td>
+                        <td><code>section.select>.content>.select_cakes>.select_cake*2</code></td>
+                        <td>2 варианта тортов</td>
+                    </tr>
+                    <tr>
+                        <td>О компании</td>
+                        <td><code>section.about</code></td>
+                        <td>Блок без content</td>
+                    </tr>
+                    <tr>
+                        <td>Отзывы</td>
+                        <td><code>section.reviews>.content>.review>.review__text</code></td>
+                        <td>Один отзыв</td>
+                    </tr>
+                    <tr>
+                        <td>Обратная связь</td>
+                        <td><code>section.feedback>.content>.form__contact+.form__download+.form__submit</code></td>
+                        <td>3 части формы</td>
+                    </tr>
+                    <tr>
+                        <td>Карта</td>
+                        <td><code>section.map>.content</code></td>
+                        <td>Блок с картой</td>
+                    </tr>
+                    <tr>
+                        <td>Подвал</td>
+                        <td><code>footer>.content>.footer__main>.footer__info+.footer__social+.footer__menu>nav^^.footer__add</code></td>
+                        <td>Сложный подвал</td>
+                    </tr>
+                    <tr>
+                        <td>Торты</td>
+                        <td><code>section.cakes>.content>.cake>(.cake_descript>.cake_descript_text)+.cake_buy>.cake_buy_wrap>.cake_buy_wrap_filling+.cake_buy_wrap_price</code></td>
+                        <td>Карточка торта</td>
+                    </tr>
+                    <tr>
+                        <td>Начинки</td>
+                        <td><code>section.fillings>.content>figure.fillings>figcaption</code></td>
+                        <td>Начинка с подписью</td>
+                    </tr>
+                    <tr>
+                        <td>Доставка</td>
+                        <td><code>section.delivery>.content>.delivery__about+.delivery__price</code></td>
+                        <td>Условия и цены</td>
+                    </tr>
+                </table>
+            </div>
+            <p style="font-size: 0.8em; color: #666; text-align: right; margin-top: 5px;">
+                * Таблица оптимизирована для просмотра, при необходимости используйте горизонтальную прокрутку
+            </p>
+        </div>
+
+        <div class="footer">
+            part2.html | Практическая работа №3, Часть 2 (Структура страниц)<br>
+            © wh1sper 2026
+        </div>
+    </div>
+    <script src="../res/js/script.js"></script>
+</body>
+</html>

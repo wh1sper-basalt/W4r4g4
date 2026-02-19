@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РКИС-1 | Главная</title>
+    <title>Практическая работа №2 | Главная</title>
     <link rel="icon" href="res/img/icon.ico" type="image/x-icon">
     <style>
         * {
@@ -18,18 +18,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('res/img/background.png');;
+            background-image: url('res/img/background.png');
             position: relative;
             overflow-x: hidden;
-        }
-
-        @keyframes move {
-            0% {
-                transform: rotate(45deg) translate(-10%, -10%);
-            }
-            100% {
-                transform: rotate(45deg) translate(10%, 10%);
-            }
         }
 
         .card {
@@ -81,15 +72,15 @@
             margin: 1.5rem 0;
             box-shadow: 0 10px 20px rgba(44, 44, 44, 0.3);
             border: none;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
             box-shadow: 0 10px 20px rgba(44, 44, 44, 0.4);
             background: white;
             color: #2c2c2c;
-            border: 2px solid transparent;
-            border-color: #2c2c2c;
+            border: 2px solid #2c2c2c;
+            transform: translateY(-3px);
         }
 
         .footer {
@@ -143,11 +134,11 @@
 <body>
     <div class="dots"></div>
     <div class="card">
-        <h1>ПР №1</h1>
-        <div class="subtitle">Основы HTML, CSS и JS</div>
+        <h1>ПР №2</h1>
+        <div class="subtitle">Bootstrap: расположение блоков</div>
 
-        <a href="tasks/task_1.html" class="btn">
-            Перейти к решению
+        <a href="task.html" class="btn" target="_blank">
+            Перейти к выполненным заданиям
         </a>
 
         <div class="footer">

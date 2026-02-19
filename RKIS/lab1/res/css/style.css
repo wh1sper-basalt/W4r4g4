@@ -1,4 +1,3 @@
-/* Монохромная палитра */
 :root {
     --black: #000000;
     --gray-900: #1a1a1a;
@@ -19,8 +18,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--gray-900);
-    
-    /* ФОН - ФАЙЛ */
+
     background-image: url('../img/background.png');
     background-repeat: repeat;
     background-attachment: fixed;
@@ -43,7 +41,6 @@ body {
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
-/* Навбар */
 .navbar {
     background: var(--gray-900);
     padding: 10px 20px;
@@ -89,7 +86,6 @@ body {
     border-left: 3px solid var(--white);
 }
 
-/* Типографика */
 h1, h2, h3, h4 {
     color: var(--black);
     margin-bottom: 15px;
@@ -107,7 +103,6 @@ h2 {
     color: var(--gray-700);
 }
 
-/* Таблицы */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -127,7 +122,6 @@ th {
     color: var(--gray-900);
 }
 
-/* Списки */
 ul, ol {
     margin: 15px 0 15px 25px;
 }
@@ -136,7 +130,6 @@ li {
     margin-bottom: 5px;
 }
 
-/* Изображения */
 img {
     max-width: 100%;
     border: 1px solid var(--gray-300);
@@ -151,7 +144,6 @@ img {
     -o-user-drag: none;
 }
 
-/* Ссылки */
 a {
     color: var(--gray-900);
     text-decoration: underline;
@@ -179,7 +171,6 @@ a:hover {
     color: var(--white);
 }
 
-/* Футер */
 .footer {
     margin-top: 40px;
     padding: 15px;
@@ -190,7 +181,6 @@ a:hover {
     color: var(--gray-500);
 }
 
-/* Утилиты */
 .border {
     border: 1px solid var(--gray-300);
     padding: 15px;
